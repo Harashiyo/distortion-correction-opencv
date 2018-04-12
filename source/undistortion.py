@@ -22,3 +22,14 @@ class DistortionCorrection:
         bytesPerLine = 3 * width
         cv2.cvtColor(dst, cv2.COLOR_BGR2RGB, dst)
         return dst
+
+
+if __name__ == '__main__':
+    args = sys.argv
+    if len(args) == 2:
+        images_dir = args[1]
+        output_dir = args[2]
+
+    else:
+        print('$ python undistortion.py [images_dir] [output_dir]')
+        quit()
